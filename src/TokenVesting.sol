@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 import { Ownable } from '@openzeppelin/contracts/access/Ownable.sol';
 import { SafeERC20 } from '@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol';
 import { IERC20 } from '@openzeppelin/contracts/token/ERC20/IERC20.sol';
+import { Test, console } from 'forge-std/Test.sol';
 /**
  * @title TokenVesting
  * @dev A token holder contract that can release its token balance gradually like a
@@ -56,7 +57,7 @@ contract TokenVesting is Ownable {
     require(_beneficiary != address(0), 'TokenVesting: beneficiary is the zero address');
     require(_cliff <= _duration, 'TokenVesting: cliff is longer than duration');
     require(_duration > 0, 'TokenVesting: duration is 0');
-    require(start + duration > block.timestamp, 'TokenVesting: final time is before current time');
+    require(_start + _duration > block.timestamp, 'TokenVesting: final time is before current time');
 
     beneficiary = _beneficiary;
     revocable = _revocable;
