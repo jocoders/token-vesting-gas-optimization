@@ -1,23 +1,23 @@
-Compiling 36 files with Solc 0.8.25
-Solc 0.8.25 finished in 565.64ms
+Compiling 4 files with Solc 0.8.25
+Solc 0.8.25 finished in 562.72ms
 Compiler run successful with warnings:
 Warning (2072): Unused local variable.
-  --> test/TokenVesting.t.sol:55:5:
+  --> test/TokenVesting.t.sol:55:9:
    |
-55 |     uint256 balanceBefore = token1.balanceOf(address(this));
-   |     ^^^^^^^^^^^^^^^^^^^^^
+55 |         uint256 balanceBefore = token1.balanceOf(address(this));
+   |         ^^^^^^^^^^^^^^^^^^^^^
 
 Warning (2072): Unused local variable.
-  --> test/TokenVesting.t.sol:61:5:
+  --> test/TokenVesting.t.sol:61:9:
    |
-61 |     uint256 balanceAfter = token1.balanceOf(address(this));
-   |     ^^^^^^^^^^^^^^^^^^^^
+61 |         uint256 balanceAfter = token1.balanceOf(address(this));
+   |         ^^^^^^^^^^^^^^^^^^^^
 
 Warning (2072): Unused local variable.
-  --> test/TokenVesting.t.sol:62:5:
+  --> test/TokenVesting.t.sol:62:9:
    |
-62 |     uint256 balContract = token1.balanceOf(address(tokenVesting));
-   |     ^^^^^^^^^^^^^^^^^^^
+62 |         uint256 balContract = token1.balanceOf(address(tokenVesting));
+   |         ^^^^^^^^^^^^^^^^^^^
 
 Warning (2072): Unused local variable.
   --> test/TokenVestingOptimized.t.sol:65:9:
@@ -38,16 +38,16 @@ Warning (2072): Unused local variable.
    |         ^^^^^^^^^^^^^^^^^^^
 
 Warning (2018): Function state mutability can be restricted to view
-  --> test/TokenVesting.t.sol:33:3:
+  --> test/TokenVesting.t.sol:33:5:
    |
-33 |   function testGetRealesed() public {
-   |   ^ (Relevant source part starts here and spans across multiple lines).
+33 |     function testGetRealesed() public {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
 
 Warning (2018): Function state mutability can be restricted to view
-  --> test/TokenVesting.t.sol:38:3:
+  --> test/TokenVesting.t.sol:38:5:
    |
-38 |   function testGetRevoked() public {
-   |   ^ (Relevant source part starts here and spans across multiple lines).
+38 |     function testGetRevoked() public {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
 
 Warning (2018): Function state mutability can be restricted to view
   --> test/TokenVestingOptimized.t.sol:43:5:
@@ -62,21 +62,21 @@ Warning (2018): Function state mutability can be restricted to view
    |     ^ (Relevant source part starts here and spans across multiple lines).
 
 
-Ran 5 tests for test/TokenVesting.t.sol:TokenVestingTest
-[PASS] testEmergencyRevoke() (gas: 220813)
-[PASS] testGetRealesed() (gas: 11571)
-[PASS] testGetRevoked() (gas: 11587)
-[PASS] testRelease() (gas: 167174)
-[PASS] testRevoke() (gas: 240201)
-Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 40.51ms (79.56ms CPU time)
-
 Ran 5 tests for test/TokenVestingOptimized.t.sol:TokenVestingOptimizedTest
 [PASS] testEmergencyRevoke() (gas: 217620)
 [PASS] testGetRealesed() (gas: 11549)
 [PASS] testGetRevoked() (gas: 11654)
 [PASS] testRelease() (gas: 165176)
 [PASS] testRevoke() (gas: 236448)
-Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 40.52ms (79.79ms CPU time)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 61.07ms (123.15ms CPU time)
+
+Ran 5 tests for test/TokenVesting.t.sol:TokenVestingTest
+[PASS] testEmergencyRevoke() (gas: 220813)
+[PASS] testGetRealesed() (gas: 11571)
+[PASS] testGetRevoked() (gas: 11587)
+[PASS] testRelease() (gas: 167174)
+[PASS] testRevoke() (gas: 240201)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 61.70ms (120.83ms CPU time)
 
 ╭--------------------------------------------+-----------------+-------+--------+-------+---------╮
 | src/TokenVesting.sol:TokenVesting Contract |                 |       |        |       |         |
@@ -155,4 +155,4 @@ Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 40.52ms (79.79ms CP
 ╰-----------------------------------------------------+-----------------+-------+--------+-------+---------╯
 
 
-Ran 2 test suites in 41.50ms (81.03ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)
+Ran 2 test suites in 62.37ms (122.78ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)
