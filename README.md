@@ -2,7 +2,7 @@
 
 ## Overview
 
-- **Contract Audited:** TokenVesting.sol & TokenVestingOptimized.sol
+- **Contract Audited:** TokenVestingOptimized.sol
 - **Optimization Techniques Used:** Solady library, storage optimization, function unification, constant storage references
 - **Audit Focus:** Reducing gas costs for deployment and function execution
 - **Findings Summary:**
